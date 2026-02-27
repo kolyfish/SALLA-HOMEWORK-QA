@@ -34,3 +34,10 @@ yarn-error.log*
 
 # OS metadata maps
 Icon?
+
+# Teaching and Tutorials
+*tutorial*
+*teaching*
+*instruction*
+guide/
+docs/tutorial/

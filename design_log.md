@@ -58,6 +58,7 @@
 - **TypeScript 型別衝突修復**：修正 `tsconfig.json` 中的 `types` 配置。移除 `@playwright/test` 全域宣告，強制 IDE 使用文件頂部的 `import` 導入型別，解決 "Cannot find name 'test'" 的 false positive 錯誤。
 - **導航機制穩定性**：在 `playwright.config.ts` 引入 `baseURL`。這解決了 POM 中使用相對路徑時導致的 `Invalid URL` 錯誤，並確保測試環境的可遷移性。
 - **環境清理與 Git 規範**：導入完整的 `.gitignore` 並手動清理 macOS 於外接硬碟產生的 `._*` 元數據檔案 (AppleDouble)，確保版本控制的純淨性。
+- **Git 版本控制初始化**：建立 Git 儲存庫並導入 Angular Commit Message 規範。排除所有非開發相關的教學檔案與系統垃圾，確保 Repo 的專業性。
 
 ---
 *進度：已完成全系列 E2E 測試實作。修復 `expect` 型別識別問題，並移除 `TripUtility` 中的 `waitForTimeout` 違規調用，達成 100% 規範符合度。*
