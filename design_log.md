@@ -19,10 +19,12 @@
 - **TypeScript 整合**：配置 `tsconfig.json` 並確保型別宣告一致。
 - **全域配置 (playwright.config.ts)**：將全域等待時間設定為 10,000ms，符合高效能測試準則。
 
-## 軟體架構師建議 (Refactor 路線)
+## 專案工程化與長期優化展望 (Future Roadmap)
+> *本節說明若專案需規模化至企業級應用，基於架構設計視角的優化路線方案：*
+
 1. **Mock Service Worker (MSW)**：在端對端測試中整合後端模擬，以便更精確地測試「跨時段計費」等難以複現的情境。
-2. **Visual Testing Integration**：針對複雜地圖介面引入視覺比對。
-3. **Data-Driven Testing (DDT)**：針對多國手機號碼格式，將數據外置於 JSON。
+2. **Visual Testing Integration**：針對複雜地圖介面引入視覺比對（如 Applitools 或 Playwright Screenshots），確保地圖渲染的一致性。
+3. **Data-Driven Testing (DDT)**：針對多國手機號碼格式，將數據外置於 JSON，提升測試數據的維護效率。
 4. **Time Mocking**：針對跨計費時段測試，建議透過 `Date.now` 封裝進行全域時間凍結，以獲得 100% 決定性的測試結果。
 
 ### 實作測試案例清單 (按業務流程排序)
